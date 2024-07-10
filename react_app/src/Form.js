@@ -8,18 +8,32 @@ function Form() {
   const handleSubmit = (e) => {
     e.preventDefault();
     
-    const user = { first_name: firstName, last_name: lastName, age: parseInt(age) };
+    const user = { first_name: firstName, 
+                  last_name: lastName, 
+                  age: parseInt(age) };
 
-    fetch('http://localhost:5000/add_user', {
+
+
+
+    
+    // Hace un request https a http://localhost:5000/add_user del tipo post y le manda el objeto user convertido en json con la información
+    fetch('http://localhost:5000/add_user',
+          {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify(user),
     })
-      .then(response => response.json())
+      .then(response => response.json()) // convierte la respuesta del servidor a JSON.
+
       .then(data => {
         console.log('Success:', data);
+
+
+
+        
+        
         // Clear form
         setFirstName('');
         setLastName('');
