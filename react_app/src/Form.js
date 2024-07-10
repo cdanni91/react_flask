@@ -12,6 +12,7 @@ function Form() {
                   last_name: lastName, 
                   age: parseInt(age) };
 
+    // Hace un request https a http://localhost:5000/add_user del tipo post y le manda el objeto user convertido en json con la información
     fetch('http://localhost:5000/add_user',
           {
       method: 'POST',
