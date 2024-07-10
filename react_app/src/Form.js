@@ -24,6 +24,9 @@ function Form() {
       .then(response => response.json())
       .then(data => {
         console.log('Success:', data);
+
+
+        
         // Clear form
         setFirstName('');
         setLastName('');
