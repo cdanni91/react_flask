@@ -34,7 +34,16 @@ function Form() {
     <form onSubmit={handleSubmit}>
       <div>
         <label>First Name:</label>
-        <input type="text" value={firstName} onChange={(e) => setFirstName(e.target.value)} required />
+
+        
+        <input 
+              type="text" 
+              value={firstName} 
+              onChange={(e) => setFirstName(e.target.value)}
+              required 
+        />
+
+
       </div>
       <div>
         <label>Last Name:</label>
