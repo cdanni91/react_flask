@@ -21,7 +21,8 @@ function Form() {
       },
       body: JSON.stringify(user),
     })
-      .then(response => response.json())
+      .then(response => response.json()) // convierte la respuesta del servidor a JSON.
+
       .then(data => {
         console.log('Success:', data);
 
