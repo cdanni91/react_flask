@@ -8,9 +8,12 @@ function Form() {
   const handleSubmit = (e) => {
     e.preventDefault();
     
-    const user = { first_name: firstName, last_name: lastName, age: parseInt(age) };
+    const user = { first_name: firstName, 
+                  last_name: lastName, 
+                  age: parseInt(age) };
 
-    fetch('http://localhost:5000/add_user', {
+    fetch('http://localhost:5000/add_user',
+          {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
